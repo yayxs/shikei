@@ -1,5 +1,5 @@
-import { FaGithub, FaXTwitter } from 'react-icons/fa6'
-import { SiBilibili } from 'react-icons/si'
+import { FaGithub, FaXTwitter, FaWeibo } from 'react-icons/fa6'
+import { SiBilibili, SiXiaohongshu } from 'react-icons/si'
 
 export default function Footer() {
   return (
@@ -29,6 +29,22 @@ export default function Footer() {
             className="text-gray-600 hover:text-gray-900 transition-colors"
           >
             <SiBilibili className="w-6 h-6" />
+          </a>
+          <a
+            href="https://weibo.com/u/7981774209"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <FaWeibo className="w-6 h-6" />
+          </a>
+          <a
+            href="https://www.xiaohongshu.com/user/profile/6673a5380000000007004a65"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <SiXiaohongshu className="w-7 h-7" />
           </a>
         </div>
       </div>
