@@ -4,15 +4,17 @@ import Link from 'next/link';
 import { Button } from './Button';
 import { Github, Heart } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
+import { MainNav } from './MainNav';
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-7xl mx-auto items-center justify-between px-4">
-        <div className="flex items-center gap-2">
-          <span className="text-xl font-bold text-gray-800 dark:text-gray-200">
-            AI Coding Tools
-          </span>
+      <div className="container flex h-16 max-w-7xl mx-auto items-center justify-between px-4">
+        <div className="flex items-center gap-6">
+          <Link href="/" className="text-xl font-bold text-foreground">
+            /
+          </Link>
+          <MainNav />
         </div>
         <div className="flex items-center space-x-4">
           <Button variant="outline" size="sm" asChild>
@@ -35,7 +37,7 @@ export function Header() {
               rel="noreferrer"
               aria-label="GitHub repository"
             >
-              <Github className="h-5 w-5 text-gray-800 dark:text-gray-200" />
+              <Github className="h-5 w-5" />
             </Link>
           </Button>
         </div>

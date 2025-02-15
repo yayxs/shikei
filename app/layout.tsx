@@ -6,6 +6,7 @@ import { Header } from './components/Header'
 import Footer from './components/Footer'
 import { ScrollToTop } from './components/ScrollToTop'
 import { Providers } from './components/Providers'
+import { MainNav } from './components/MainNav'
 
 const inter = Inter({ subsets: ['latin'] })
 
