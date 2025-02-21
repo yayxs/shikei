@@ -2,9 +2,8 @@
 
 import Link from 'next/link';
 import { Button } from './Button';
-import { Github, Heart } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
-import { MainNav } from './MainNav';
 
 export function Header() {
   return (
@@ -14,10 +13,9 @@ export function Header() {
           <Link href="/" className="text-xl font-bold text-foreground">
             /
           </Link>
-          <MainNav />
         </div>
         <div className="flex items-center space-x-4">
-          <Button variant="outline" size="sm" asChild>
+          {/* <Button variant="outline" size="sm" asChild>
             <Link
               href="https://sponsors-10k.netlify.app/"
               target="_blank"
@@ -28,7 +26,7 @@ export function Header() {
               <Heart className="h-4 w-4 text-pink-500" />
               <span className="hidden md:inline-block">Sponsors</span>
             </Link>
-          </Button>
+          </Button> */}
           <ThemeToggle />
           <Button variant="ghost" size="icon" asChild>
             <Link
