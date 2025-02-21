@@ -1,77 +1,42 @@
 'use client';
 
-import { Button } from "@/app/components/Button";
-import { Card } from "@/app/components/Card";
-import { ExternalLink, Github } from "lucide-react";
+import { ProjectCard } from "@/app/components/ProjectCard";
+import { projects } from "@/app/config/projects";
 
 export default function Home() {
+  const focusProjects = projects.filter(p => p.category === 'focus');
+  const moreProjects = projects.filter(p => p.category === 'more');
+
   return (
     <main className="min-h-screen p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
-        {/* 项目网格展示 */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* AI Coding 项目 */}
-          <Card className="overflow-hidden flex flex-col group">
-            <div className="aspect-[16/9] relative">
-              <iframe
-                src="https://ai-coding.netlify.app/"
-                className="w-full h-full absolute inset-0"
-                title="AI Coding 网站预览"
-              />
-            </div>
-            <div className="p-6 flex flex-col flex-1">
-              <h2 className="text-2xl font-bold mb-2 group-hover:text-blue-600 transition-colors">AI Coding 助手</h2>
-              <p className="text-muted-foreground mb-6 flex-1">
-                智能编程辅助工具，帮助开发者更好地理解和使用 AI 编程工具。
-              </p>
-              <div className="flex gap-4">
-                <Button asChild>
-                  <a href="https://ai-coding.netlify.app/" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    访问
-                  </a>
-                </Button>
-                <Button variant="outline" asChild>
-                  <a href="https://github.com/yourusername/ai-coding" target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    源码
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </Card>
+        {/* 标题区域 */}
+        <section className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-2">Projects</h1>
+          <p className="text-muted-foreground">Projects that I created or maintaining.</p>
+        </section>
 
-          {/* Running Code 项目 */}
-          <Card className="overflow-hidden flex flex-col group">
-            <div className="aspect-[16/9] relative">
-              <iframe
-                src="https://running-code.vercel.app/"
-                className="w-full h-full absolute inset-0"
-                title="Running Code 网站预览"
-              />
+        {/* 主要项目 */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8">Current Focus</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {focusProjects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
+        </section>
+
+        {/* 更多项目 */}
+        {moreProjects.length > 0 && (
+          <section>
+            <h2 className="text-3xl font-bold mb-8">More Projects</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {moreProjects.map((project) => (
+                <ProjectCard key={project.title} project={project} />
+              ))}
             </div>
-            <div className="p-6 flex flex-col flex-1">
-              <h2 className="text-2xl font-bold mb-2 group-hover:text-blue-600 transition-colors">Running Code</h2>
-              <p className="text-muted-foreground mb-6 flex-1">
-                在线代码运行与分享平台，支持多种编程语言的实时预览。
-              </p>
-              <div className="flex gap-4">
-                <Button asChild>
-                  <a href="https://running-code.vercel.app/" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    访问
-                  </a>
-                </Button>
-                <Button variant="outline" asChild>
-                  <a href="https://github.com/yourusername/running-code" target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    源码
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </Card>
-        </div>
+          </section>
+        )}
       </div>
     </main>
   );
