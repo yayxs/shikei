@@ -1,6 +1,8 @@
 import { Card } from "@/app/components/Card";
 import { Github, Rocket, Code, Box, Terminal } from "lucide-react";
 import { type Project, type DeployPlatform } from "../config/projects";
+import Vercel from "./Vercel";
+import Netlify from "./Netlify";
 
 const icons = {
   rocket: Rocket,
@@ -17,6 +19,18 @@ const platformColors: Record<DeployPlatform, { bg: string; text: string }> = {
   vercel: {
     bg: 'bg-neutral-50',
     text: 'text-neutral-900'
+  }
+};
+
+// 平台图标组件
+const PlatformIcon = ({ platform }: { platform: DeployPlatform }) => {
+  switch (platform) {
+    case 'vercel':
+      return <Vercel className="w-4 h-4 mr-1" />;
+    case 'netlify':
+      return <Netlify className="w-4 h-4 mr-1" />;
+    default:
+      return null;
   }
 };
 
@@ -43,8 +57,9 @@ export function ProjectCard({ project }: { project: Project }) {
                 href={link.url}
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`px-3 py-1 rounded-full text-sm font-medium ${platformColors[link.platform].bg} ${platformColors[link.platform].text} hover:opacity-80 transition-opacity`}
+                className={`px-3 py-1 rounded-full text-sm font-medium ${platformColors[link.platform].bg} ${platformColors[link.platform].text} hover:opacity-80 transition-opacity inline-flex items-center`}
               >
+                <PlatformIcon platform={link.platform} />
                 {link.platform.charAt(0).toUpperCase() + link.platform.slice(1)}
               </a>
             ))}
