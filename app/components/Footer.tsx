@@ -2,6 +2,7 @@
 
 import { FaGithub, FaXTwitter, FaWeibo, FaYoutube } from 'react-icons/fa6'
 import { SiBilibili, SiXiaohongshu, SiZhihu, SiJuejin } from 'react-icons/si'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -48,6 +49,29 @@ export default function Footer() {
             className="text-gray-600 hover:text-gray-900 transition-colors p-3"
           >
             <FaWeibo className="w-6 h-6" />
+          </a>
+          <a
+            href="https://wx.zsxq.com/group/88882585555212"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 transition-colors p-3"
+          >
+            <svg width="24" height="24" viewBox="0 0 48 48" className="w-6 h-6">
+              <path d="M39 25c0 8.837-7.163 16-16 16S7 33.837 7 25 14.163 9 23 9" stroke="currentColor" strokeWidth="5" strokeLinecap="round"/>
+              <circle cx="34.5" cy="13.5" r="4.5" fill="currentColor"/>
+            </svg>
+          </a>
+          <a
+            href="https://okjk.co/S7rLZ1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 transition-colors p-3"
+          >
+            <svg viewBox="0 0 48 48" className="w-6 h-6">
+              <rect x="6" y="6" width="36" height="36" rx="8" fill="currentColor" />
+              <path fillRule="evenodd" clipRule="evenodd" d="M22.5 14.5V26C22.5 29.5 17.5 29.5 17.5 29.5L18.5 33.5C18.5 33.5 27 33 27 26V14.5H22.5Z" fill="white" />
+              <path d="M27 26C27 33 18.5 33.5 18.5 33.5L20 35C20 35 22.5963 34.8089 25 33.5C26 32.9555 29 31 29 28V16L27 14.5V26Z" fill="#5EB8F9" />
+            </svg>
           </a>
           <a
             href="https://www.youtube.com/@10k_ai6"
@@ -124,6 +148,29 @@ export default function Footer() {
               className="text-gray-600 hover:text-gray-900 transition-colors p-1.5"
             >
               <FaWeibo className="w-5 h-5" />
+            </a>
+            <a
+              href="https://wx.zsxq.com/group/88882585555212"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors p-1.5"
+            >
+              <svg width="20" height="20" viewBox="0 0 48 48" className="w-5 h-5">
+                <path d="M39 25c0 8.837-7.163 16-16 16S7 33.837 7 25 14.163 9 23 9" stroke="currentColor" strokeWidth="5" strokeLinecap="round"/>
+                <circle cx="34.5" cy="13.5" r="4.5" fill="currentColor"/>
+              </svg>
+            </a>
+            <a
+              href="https://okjk.co/S7rLZ1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors p-1.5"
+            >
+              <svg viewBox="0 0 48 48" className="w-5 h-5">
+                <rect x="6" y="6" width="36" height="36" rx="8" fill="currentColor" />
+                <path fillRule="evenodd" clipRule="evenodd" d="M22.5 14.5V26C22.5 29.5 17.5 29.5 17.5 29.5L18.5 33.5C18.5 33.5 27 33 27 26V14.5H22.5Z" fill="white" />
+                <path d="M27 26C27 33 18.5 33.5 18.5 33.5L20 35C20 35 22.5963 34.8089 25 33.5C26 32.9555 29 31 29 28V16L27 14.5V26Z" fill="#5EB8F9" />
+              </svg>
             </a>
           </div>
 
