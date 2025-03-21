@@ -2,7 +2,6 @@
 
 import { FaGithub, FaXTwitter, FaWeibo, FaYoutube } from 'react-icons/fa6'
 import { SiBilibili, SiXiaohongshu, SiZhihu, SiJuejin } from 'react-icons/si'
-import Image from 'next/image'
 
 export default function Footer() {
   return (
