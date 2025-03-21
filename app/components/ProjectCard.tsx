@@ -50,7 +50,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <h3 className={`text-xl font-semibold mb-2 group-hover:${project.iconColor} transition-colors duration-300`}>
             {project.title}
           </h3>
-          <p className="text-muted-foreground mb-4 group-hover:text-foreground transition-colors duration-300">
+          <p className="text-[hsl(var(--muted-foreground))] mb-4 group-hover:text-[hsl(var(--foreground))] transition-colors duration-300">
             {project.description}
           </p>
           <div className="flex flex-wrap items-center gap-3">
@@ -70,7 +70,7 @@ export function ProjectCard({ project }: { project: Project }) {
               href={project.github}
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-all duration-300 transform hover:translate-y-[-2px]"
+              className="inline-flex items-center text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] transition-all duration-300 transform hover:translate-y-[-2px]"
             >
               <Github className="w-4 h-4 mr-1" />
               Source

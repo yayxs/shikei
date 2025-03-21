@@ -21,13 +21,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
       </head>
-      <body className='min-h-screen bg-background text-foreground transition-colors duration-300'>
+      <body className='min-h-screen bg-[hsl(var(--background))] text-[hsl(var(--foreground))] transition-colors duration-300'>
         <Providers>
           <Header />
           <main className='relative'>
-           
             <div className='relative z-10 mx-auto max-w-7xl px-4 sm:px-4 md:px-6 lg:px-8'>
-              {children}
+              {children as React.ReactNode}
             </div>
           </main>
           <Footer />
