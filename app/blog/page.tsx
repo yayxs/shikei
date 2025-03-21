@@ -9,6 +9,11 @@ export const metadata = {
 
 const BLUR_FADE_DELAY = 0.04;
 
+type Props = {
+  params: Record<string, never>;
+  searchParams: Record<string, string | string[] | undefined>;
+};
+
 export default async function BlogPage() {
   const posts = await getBlogPosts();
 
