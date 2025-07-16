@@ -1,30 +1,30 @@
-import {
-  Twitter,
-  Youtube,
-  Github,
-  type LucideIcon
-} from 'lucide-react';
+import { IconType } from 'react-icons';
+import { FaGithub, FaTwitter, FaYoutube } from 'react-icons/fa6';
 
 export interface PlatformIcon {
   name: string;
-  Icon: LucideIcon;
+  Icon: IconType;
   color: string;
+  bgColor: string;
 }
 
 export const platformIcons: Record<string, PlatformIcon> = {
   GitHub: {
     name: "GitHub",
-    Icon: Github,
-    color: "#181717"
+    Icon: FaGithub,
+    color: "#ffffff",
+    bgColor: "#181717"
   },
   X: {
     name: "X",
-    Icon: Twitter,
-    color: "#000000"
+    Icon: FaTwitter,
+    color: "#ffffff",
+    bgColor: "#000000"
   },
   YouTube: {
     name: "YouTube",
-    Icon: Youtube,
-    color: "#FF0000"
+    Icon: FaYoutube,
+    color: "#ffffff",
+    bgColor: "#FF0000"
   }
 };

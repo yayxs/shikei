@@ -47,6 +47,7 @@ export default function SocialMediaTabs() {
           const iconInfo = getIcon(platform.name);
           const IconComponent = iconInfo?.Icon;
           const iconColor = iconInfo?.color || '#64748b';
+          const bgColor = iconInfo?.bgColor || '#f1f5f9';
 
           return (
             <a
@@ -59,8 +60,8 @@ export default function SocialMediaTabs() {
               <div className="flex items-center space-x-3">
                 {IconComponent && (
                   <div 
-                    className="p-2 rounded-lg"
-                    style={{ backgroundColor: `${iconColor}15` }}
+                    className="p-2 rounded-lg flex items-center justify-center"
+                    style={{ backgroundColor: bgColor }}
                   >
                     <IconComponent 
                       size={24} 
@@ -76,6 +77,13 @@ export default function SocialMediaTabs() {
             </a>
           );
         })}
+        
+        {platforms.length === 0 && (
+          <div className="col-span-full text-center py-12">
+            <p className="text-gray-500 text-lg">暂无平台</p>
+            <p className="text-gray-400 text-sm mt-2">中文平台即将上线</p>
+          </div>
+        )}
       </div>
     </div>
   );
