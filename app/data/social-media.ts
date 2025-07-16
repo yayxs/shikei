@@ -8,17 +8,17 @@ export const englishPlatforms: SocialPlatform[] = [
   {
     name: "GitHub",
     url: "https://github.com/yayxs",
-    description: "Code repository and version control platform"
+    description: "Collected my handwritten code over the years"
   },
   {
     name: "X",
     url: "https://x.com/vibercoding",
-    description: "Social networking and microblogging platform"
+    description: "My latest and most timely remarks, focusing on AI and front-end"
   },
   {
     name: "YouTube",
     url: "https://www.youtube.com/@vibercoding",
-    description: "Video sharing and content creation platform"
+    description: "Cognition meets you in the form of video"
   }
 ];
 
